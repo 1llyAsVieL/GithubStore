@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jQuery.js"></script>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233,233,233);
+}
+
+.header{
+    margin-top: -30px;
+    padding: 0 20px;
+    background-color: rgba(0, 128, 128, 0.548);
+    height: 90px;
+    width: auto;
+    line-height: 90px;
+}   
+div.titleclass{
+    width: 190px;
+    height: 90px;
+    color: white;
+  
+    font-size: 30px;
+    float: left;
+   text-align: center;
+    line-height: 90px;
+    margin-top: 13px;
+    
+}
+.menu{
+    float: right;
+    line-height: 90px;
+}
+.menu a{
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 15px;
+ 
+}
+.show-menu-btn,.hide-menu-btn{
+    transition: 0.6s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.show-menu-btn{
+    float: right;
+    margin-top: 20px;
+}
+.show-menu-btn i{
+    line-height: 100px;
+}
+.cart{
+    font-size: 20px;
+}
+.cart:hover{
+    transition: 0.8s ease;
+   /* color:rgba(231, 231, 231, 0.801); */
+}
+.show-menu-btn:hover{
+    color: white;
+    transition: 0.8s;
+    
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;      
+}
+
+.box{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 17px;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+#item-inf{
+    color: rgb(110, 110, 110);
+}
+#item-name{
+    font-size: 35px;
+    color: black;
+    font-family: 黑体;
+}
+#item-price{
+    font-size: 24px;
+    color: rgba(255, 51, 0, 0.938);
+    font-family: 微软雅黑;
+}
+a:hover{
+    color:rgb(110, 110, 110) ;
+}
+svg{
+  font-size: 15px;
+}
+a{
+    transition: all .6s cubic-bezier(0,0,1,1);
+}
+
+.speopPhoto{
+    margin-top: 10%;
+    margin-left: 8%;
+    float: left;    
+    width: 250px;
+    height: 280px;
+    background-color: gray;
+    border:1px solid black;
+    box-sizing: border-box;
+    }
+.rightthing{
+    float: right;
+    margin-top: 60px;
+    margin-right: 25%;
+    line-height: 70px;
+}
+.item-name{
+    height: 50px;
+}
+.item-inf{
+    height: 90px;
+}
+.numbox{
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid rgb(221, 221, 221);
+}
+#left,#center,#right{
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #eee;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+#center{
+    width: 60px;
+    background: #fff;
+    cursor: auto;
+    
+}
+#right{
+    float: right;
+    cursor: pointer;
+}
+
+.re-submit1{
+    margin-top: 70px;
+    width: 150px;
+    height: 45px;
+    background-color: rgb(255, 183, 183);
+    border: 1px solid red;
+    color: red;
+    font-size: 18px;
+    font-family: 黑体;
+}
+.re-submit2{
+    margin-top: 70px;
+    width: 150px;
+    height: 45px;
+}
+
+
+@media screen and (max-width:953px){
+    .show-menu-btn, .hide-menu-btn{
+        display: block;
+        margin-top: 33px;
+        
+    }
+
+    a:hover{
+        transition: 0.8s ease;
+        -color:rgba(231, 231, 231, 0.801);
+    }
+    
+    .menu{
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        background-color: rgba(42, 78, 78, 0.692);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    
+    .hide-menu-btn{
+        position: absolute;
+        top: -40px;
+        right: 20px;
+    }
+    
+    #chk:checked ~ .menu{
+        right: 0;
+    }
+   .box{
+       width: 600px;
+       height: 1000px;
+    }
+}
+
+@media screen and (max-width:610px){
+    .box{
+        width: 320px;
+        height: 1000px;
+    }
+    .rightthing{
+        float: right;
+        margin-top: 60px;
+        margin-right: 15%;
+        line-height: 30px;
+    }
+    .numbox{
+        margin-top: 5%;
+        margin-left: 82px;
+    }
+    .re-submit1{
+        margin-top: 60px;
+        margin-left: 80px;
+        width: 150px;
+        height: 45px;
+        background-color: rgb(255, 183, 183);
+        border: 1px solid red;
+        color: red;
+        font-size: 18px;
+        font-family: 黑体;
+    }
+    .re-submit2{
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 150px;
+        height: 45px;
+    }
+    .item-inf{
+        margin-left: 5%;
+        margin-top: 70px;
+        height: 90px;
+    }
+    .item-name{
+        margin-left: 25px;
+        text-align: center;
+    }
+    .item-price{
+        margin-left: 5%;
+    }
+
+    .numtext{
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+}
+
+    </style>
+    
+</head>
+<body>
+    
+    <div class="header">
+        <div class="titleclass">天工易购</div>
+        <input type="checkbox" id="chk">
+       
+        <ul class="menu">
+            <a href="infchange.html">修改信息</a>
+            <a href="shop.html">立即购物</a>
+            <a href="./sponsor.html">赞助我们</a>
+            <a href="Cart.html" class="cart">
+                <svg t="1605104672041" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3162" width="30px" height="30px"><path d="M962.079334 545.28l61.44-352.768c1.536-7.68-0.512-14.848-5.632-20.992-5.12-5.632-12.288-9.216-19.456-9.216H279.583334c-14.336 0-25.6 11.264-25.6 25.6s11.264 25.6 25.6 25.6h688.64l-53.248 304.128-631.296 84.48L184.351334 137.728c-1.536-7.68-6.656-14.336-13.824-17.408l-133.632-66.56c-12.8-6.144-28.16-1.024-34.304 11.776-6.144 12.8-1.024 28.16 11.776 34.304l122.368 60.416L266.271334 765.44c2.56 11.776 12.8 20.48 25.088 20.48h663.552c14.336 0 25.6-11.264 25.6-25.6s-11.264-25.6-25.6-25.6H311.839334l-17.408-81.92 645.632-86.016c11.264-2.048 19.968-10.752 22.016-21.504z" p-id="3163" fill="#ffffff"></path><path d="M395.295334 896m-51.2 0a51.2 51.2 0 1 0 102.4 0 51.2 51.2 0 1 0-102.4 0Z" p-id="3164" fill="#ffffff"></path><path d="M866.335334 896m-51.2 0a51.2 51.2 0 1 0 102.4 0 51.2 51.2 0 1 0-102.4 0Z" p-id="3165" fill="#ffffff"></path></svg>
+                购物车</a>
+            <label for="chk" class="hide-menu-btn">
+                <svg t="1604924223885" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8659" width="50px" height="50px"><path d="M810.666667 128H213.333333a85.333333 85.333333 0 0 0-85.333333 85.333333V810.666667a85.333333 85.333333 0 0 0 85.333333 85.333333H810.666667a85.333333 85.333333 0 0 0 85.333333-85.333333V213.333333a85.333333 85.333333 0 0 0-85.333333-85.333333m-145.066667 597.333333L512 571.733333 358.4 725.333333 298.666667 665.6l153.6-153.6L298.666667 358.4 358.4 298.666667l153.6 153.6L665.6 298.666667 725.333333 358.4 571.733333 512l153.6 153.6-59.733333 59.733333z" fill="#033e51" p-id="8660"></path></svg>
+            </label>
+        </ul>
+    </div>
+
+    <div class="box">
+            
+            <form action="" method="POST" class="stoRethings">
+                <div class="speopPhoto">此处显示图片</div>
+                    <!-- 此处是商品名字 -->
+                    <div class="rightthing">
+                    <div class="item-name">
+                        <i id="item-name">仲夏夜淫梦の野兽先辈</i>
+                    </div>
+                    
+                    <div class="item-inf">
+                        商品信息：<i id="item-inf">啊啊啊啊,阿巴阿巴</i>
+                    </div>
+                    
+                    <div class="item-price">
+                        价格：<i id="item-price">¥114514</i>
+                    </div>
+                    <!-- 此处是商品数量 -->
+                    <div class="numtext">
+                    数量：
+                    <div class="numbox">
+                        <div id="left">-</div>
+                        <div id="center">1</div>
+                        <div id="right">+</div>
+                        还剩余<div id="youhavenum"></div>
+              <script>
+                  var $max;
+                 $("#left").click(function(){
+                     let num=$("#center").text()
+                     if((num-1)<1){
+                         alert("不能购买负数的商品")
+                     }else{
+                         num=num-1
+                         $("#center").text(num)
+                     }
+                    })
+                 $("#right").click(function(){
+                     let num2=$("#center").text()
+                     if(num2+1>$max){
+                         alert("购买上限")
+                     }else{
+                         (num2)++
+                         $("#center").text(num2)
+                     }
+                 })   
+
+
+
+              </script>
+                    </div>
+                    </div>
+                        <input type="submit" class="re-submit1" value="立即购买" name="buynow">
+                        <input type="submit" class="re-submit2" value="加入购物车" name="gobuycar">
+                        <!-- 这是两个表单需要调用两个后端程序 -->
+                </div>
+
+            </form>
+    </div>
+    <br><br>
+    
+    <div class="bottombar">
+        
+    </div>
+</body>
+</html>

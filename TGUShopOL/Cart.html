@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/Cart.css">
+    <script type="text/javascript">
+        if (window.addEventListener) {
+            window.addEventListener("load",init);
+        } else if(window.attachEvent()){   //IE浏览器不支持addEventListener
+            window.attachEvent("onload",init);  //IE浏览器在写时间的时候必须加上on
+        }
+    
+        function init(){
+            var left = document.getElementById("left");
+            left.onclick = function (){
+                leftNum();   
+            }
+            
+            var right = document.getElementById("right");
+            right.onclick = function (){
+                rightNum();
+            }
+            
+            function leftNum(){
+                var center = document.getElementById("center").innerHTML;
+                if (center > 1) {   //如果中间显示的数大于1
+                    center--;       //自减
+                    currentNum(center);  //中间显示自减后的数值
+                } else{
+                    alert("最少要买一个哦，欧尼酱！！！");
+                }
+            }
+            
+            function rightNum(){
+                var center = document.getElementById("center").innerHTML;
+                if (center < 100) {   //如果中间显示的数值小于最大的数
+                    center++  //自加
+                    currentNum(center);   //在中间显示自加后的数值
+                } else{
+                    alert("已经达到最大购买量了哦，欧尼酱！！！");
+                }
+            }
+            
+            function currentNum(num){
+                center.innerHTML = num;   //在中间显示相应的数值
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="topbar" id="header">
+        <a href="./shop.html"><h2>天工易购</h2></a>
+    </div>
+<div class="container">
+    <div class="cart-good-list">
+        <div class="list-head">
+            <div div-01 class="all-check"><input type="checkbox" id="all-check-items" class="all-check1">全选</div>
+            <div div-01 class="goods-img">&nbsp;</div>
+            <div div-01 class="goods-name">商品名称</div>
+            <div div-01 class="goods-price">单价</div>
+            <div div-01 class="goods-num">数量</div>
+            <div div-01 class="goods-total">小计</div>
+            <div div-01 class="goods-action">操作</div>
+        </div><br><br><hr class="hr0">
+        <form action="" method="POST">
+            <div class="item-box">
+                <div class="item-table">
+                    <div class="item-row">
+                        <div class="item-check"><input type="checkbox" id="all-check-items" class="item-check1"></div>
+                        <div class="goods-img1">
+                            <a href="./shopthing.html">
+                                <img src="" alt="" width="80px" height="80px">
+                            </a>
+                        </div>
+                        <div class="goods-name1">
+                            <h3 class="name"><a href="shopthing.html">商品1111111111</a></h3>
+                        </div>
+                        <div class="goods-price1">
+                            <p class="price">99.9元</p>
+                        </div>
+                        <div class="goods-num1">
+                            <div class="numbox"><div id="left">-</div>
+                            <div id="center">1</div>
+                            <div id="right">+</div></div>
+                        </div>
+                        <div class="goods-total1">
+                            <p class="total">99.9元</p>
+                        </div>
+                        <div class="goods-action1">
+                            <a href="#" class="action"><svg t="1605524018646" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6936" width="25px" height="25px"><path d="M512 64c-247.4 0-448 200.6-448 448 0 247.4 200.6 448 448 448s448-200.6 448-448C960 264.6 759.4 64 512 64L512 64zM118.3 512c0-217.4 176.3-393.7 393.7-393.7 94.3 0 180.9 33.2 248.7 88.5 10.3 8.4 20.1 17.3 29.5 26.6L220.8 777c-1-1.1-2-2.2-2.9-3.3C155.9 704.2 118.3 612.5 118.3 512L118.3 512zM512 905.7c-94.8 0-181.8-33.5-249.7-89.3l565.4-539.7c49 65.6 78 147.1 78 235.3C905.7 729.4 729.4 905.7 512 905.7L512 905.7zM512 905.7" p-id="6937" fill="#8a8a8a"></path></svg></a>
+                        </div> <!--<hr class="hr1"> -->
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+
+ 
+        <div class="cart-bottombar">
+            <div class="botbar-left">
+                <span items-num="" class="cart-total">共 <i items-num="">1</i> 件商品，已选择 <i items-num="">0</i>件</span>
+            </div>
+            <div class="botba-right">
+                <div class="buybox">
+                <a href="javascript:;">立即购买</a>
+                </div>
+            </div>
+            
+        </div>
+    
+</div>
+</body>
+</html>

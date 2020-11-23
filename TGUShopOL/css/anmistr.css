@@ -1,0 +1,259 @@
+a{
+    text-decoration:none ;
+}
+body{
+    background-image: url(../img/bg01.png);
+    overflow: hidden;
+}
+.box{
+    background-color: rgba(231, 231, 231, 0.5);
+    width: 1400px;
+    height: 650px;
+    margin: auto;
+    margin-top: 3vh;
+}
+.admain-topBar{
+    width: 100vw;
+    height: 5vh;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 5vh;
+    /* border: 1px solid black; */
+    /* position: absolute; */
+    /* top: 0; */
+}
+.icon{
+    width: auto;
+    height: 5vh;
+    line-height: 5vh;
+    font-size: 30px;
+    font-family: 微软雅黑;
+    color: white;
+}
+.admain-Main{
+    width: 70vw;
+    height: 95vh;
+  
+    margin: 0 auto;
+    position: relative;
+    z-index:1;
+}
+
+.admain-butomBar{
+    width: 100vw;
+    height: 4vh;
+    position: absolute;
+    /* background-color: red; */
+    bottom: 6vh;
+    position: absolute;
+    z-index: 20;
+}
+.admin-down-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 4vh;
+}
+.admain-top{
+    width: 70vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 6vh;
+    border-bottom: 1px solid black;
+    /* background-color: white; */
+    /* opacity: .5; */
+}
+.rootfont{
+    transition: all .4s cubic-bezier(0,0,1,1);
+}
+.admain-mfont{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+li:hover{
+    color: white;
+}
+.line{
+ width: 1px;
+ height: 2vh; 
+ margin: auto 0;
+ margin-right: 5px;
+ margin-left: 5px;
+ background-color: black;
+}
+a{
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: rgb(3, 163, 163);
+
+}
+div[class*=button]{
+  width: 14vw;
+  height: 10vh;
+  /* background-color: teal; */
+  opacity: 1;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3ch;
+  position: relative;
+  z-index: 10;
+  transition: all .5s cubic-bezier(0,0,1,1);
+}
+
+div.admain-buttom {
+widows: 70vw; 
+height: 10vh;
+display: flex;
+opacity: 1;
+}
+.infShow{
+width: 70vw;
+height: 75vh;
+position: relative;
+/* 这里如果要改的话你最好border看看范围以防错位 */
+}
+
+
+
+/* div[class*=button]:hover{
+    background-color: teal;
+    color: white;
+    
+  } */
+/* 可以用jq直接写，重构 */
+
+div[id*=show]{
+width: 70vw;
+height: 75vh;
+position: absolute;
+box-sizing: border-box;
+display: none;
+color: red;
+}
+
+
+
+
+/* .noInformation{
+font-size: 90px;
+color: gray;
+/* width: auto; */
+/* height: 6vh;
+position: absolute;
+}
+ */ 
+
+.box1{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.63);
+    text-align: center;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+    font-family: 微软雅黑;
+    line-height: 35px;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+.box2{
+    width: 500px;
+    height: 360px;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.63);
+    text-align: center;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+    font-family: 微软雅黑;
+    line-height: 35px;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+.re-submit{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    color: white;
+    font-family: 黑体;
+    border: 1px solid teal;
+}
+svg{
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1420px){
+    .box{
+        width: 1000px;
+        background-color: rgba(231, 231, 231, 0.5);
+        height: 600px;
+        margin: auto;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .box{
+        width: 730px;
+        background-color: rgba(231, 231, 231, 0.5);
+        height: 600px;
+        margin: auto;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 745px){
+    .box{
+        width: 550px;
+        background-color: rgba(231, 231, 231, 0.5);
+        height: 650px;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .box1{
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        margin-top: 18%;
+        background-color: rgba(255, 255, 255, 0.63);
+        text-align: center;
+        font-size: 15px;
+        color: rgb(41, 41, 41);
+        font-family: 微软雅黑;
+        line-height: 35px;
+        padding-top: 20px;
+    }
+    .box2{
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        margin-top: 18%;
+        background-color: rgba(255, 255, 255, 0.63);
+        text-align: center;
+        font-size: 15px;
+        color: rgb(41, 41, 41);
+        font-family: 微软雅黑;
+        line-height: 35px;
+        padding-top: 20px;
+    }
+}
+
+#show-inf{
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    margin: 0 auto;
+   background: fixed;
+}
+

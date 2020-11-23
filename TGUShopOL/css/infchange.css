@@ -1,0 +1,242 @@
+a{
+    text-decoration:block ;
+}
+a:hover{
+    text-decoration: none;
+}
+body{
+    background: url(../img/bg01.png)no-repeat center center fixed;
+    background-size: cover;
+}
+.box{
+    background-color: rgba(0, 0, 0, 0.164);
+    width: 1400px;
+    height: 650px;
+    margin: auto;
+    margin-top: 5%;
+}
+.Inf-topBar{
+    width: 100vw;
+    height: 5vh;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 5vh;
+}
+.icon{
+    width: auto;
+    height: 5vh;
+    line-height: 5vh;
+    font-size: 30px;
+    font-family: 微软雅黑;
+    color: white;
+}
+.Inf-Main{
+    width: 70vw;
+    height: 95vh;
+    margin: 0 auto;
+    position: relative;
+    z-index:1;
+}
+
+.Inf-butomBar{
+    width: 100vw;
+    height: 4vh;
+    position: absolute;
+    bottom: 0;
+}
+.Inf-down-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 4vh;
+}
+
+.Inf-top{
+    width: 70vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 6vh;
+    border-bottom: 1px solid black;
+}
+.changefont{
+    transition: all .4s cubic-bezier(0,0,1,1);
+    font-size: 25px;
+}
+.Inf-mfont{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.line{
+    width: 1px;
+    height: 2vh; 
+    margin: auto 0;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: black;
+}
+a{
+  color: black;
+}
+a:hover{
+  text-decoration: block;
+  color: rgb(3, 163, 163);
+
+}
+div[class*=button]{
+  width: 14vw;
+  height: 10vh;
+  opacity: 1;
+  text-align: center;
+  line-height: 10vh;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3ch;
+  position: relative;
+  z-index: 10;
+  transition: all .5s cubic-bezier(0,0,1,1);
+}
+div[class*=button]:hover{
+  background-color: teal;
+  color: white;
+}
+div.Inf-buttom {
+    widows: 70vw; 
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+.infShow{
+    width: 70vw;
+    height: 75vh;
+    position: relative;
+    /* 这里如果要改的话你最好border看看范围以防错位 */
+}
+div[id*=show]{
+    width: 70vw;
+    height: 75vh;
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+.box1{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.671);
+    text-align: center;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+    font-family: 微软雅黑;
+    line-height: 25px;
+    padding-top: 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    display: none;
+}
+.usertext{
+    margin-top: 7%;
+    background-color: rgba(255, 255, 255, 0.075);
+    border: 0;
+    border-bottom: 2px solid cadetblue;
+    height: 25px;
+    width: 200px;
+}
+.user-submit{
+    margin-top: 35px;
+    width: 90px;
+    height: 32px;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 2px solid teal;
+    background-color: rgba(0, 128, 128, 0.397);
+}
+
+
+.box2{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.671);
+    text-align: center;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+    font-family: 微软雅黑;
+    line-height: 35px;
+    padding-top: 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    display: none;
+}
+.shoptext{
+    margin-top: 7%;
+    background-color:  rgba(255, 255, 255, 0.075);
+    border: 0;
+    border-bottom: 2px solid cadetblue;
+    height: 25px;
+    width: 200px;
+}
+.shop-submit{
+    margin-top: 35px;
+    width: 90px;
+    height: 32px;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 2px solid teal;
+    background-color: rgba(0, 128, 128, 0.397);
+}
+
+
+.box3{
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.671);
+    text-align: center;
+    font-size: 15px;
+    color: rgb(41, 41, 41);
+    font-family: 微软雅黑;
+    line-height: 35px;
+    padding-top: 20px;
+    border-radius: 8px;
+    font-size: 17px;
+    display: none;
+}
+.babytext{
+    margin-top: 6%;
+    background-color: rgba(255, 255, 255, 0.075);
+    border: 0;
+    border-bottom: 2px solid cadetblue;
+    height: 25px;
+    width: 200px;
+}
+.baby-submit{
+    margin-top: 35px;
+    width: 90px;
+    height: 32px;
+    border-radius: 5px;
+    border: 0;
+    border-bottom: 2px solid teal;
+    background-color: rgba(0, 128, 128, 0.397); 
+}
+
+
+.re-submit{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-image: linear-gradient(15deg, #47a4da 0%, #80d0c7 100%);
+    color: white;
+    font-family: 黑体;
+    border: 1px solid teal;
+}
