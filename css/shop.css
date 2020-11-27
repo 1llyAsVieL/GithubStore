@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 240, 240);
+}
+
+/* 以下都是顶部菜单 */
+.header{
+    margin-top: -30px;
+    padding: 0 20px;
+    background-color: rgba(0, 128, 128, 0.548);
+    height: 90px;
+    width: auto;
+}
+h2{
+    color: white;
+    font-size: 40px;
+    float: left;
+    text-transform: uppercase;
+    
+}
+.menu{
+    float: right;
+    line-height: 100px;
+}
+.menu a{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 15px;
+}
+.show-menu-btn,.hide-menu-btn{
+    transition: 0.6s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.show-menu-btn{
+    float: right;
+    margin-top: 20px;
+}
+.show-menu-btn i{
+    line-height: 100px;
+}
+.show-menu-btn:hover{
+    color: white;
+    transition: 0.8s;
+    
+}
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;      
+}
+.header a:hover{
+    color: rgb(0, 58, 48);
+    transition: 1s ease;
+}
+
+@media screen and (max-width:953px){
+    .show-menu-btn,.hide-menu-btn{
+        display: block;
+        margin-top: 33px;
+        
+    } 
+    .menu{
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        background-color: rgba(95, 148, 148, 0.692);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: -40px;
+        right: 20px;
+    }
+    #chk:checked ~ .menu{
+        right: 0;
+    }
+}
+/* 以上都是顶部菜单 */
+
+/* 以下设置瀑布流box大小，需要根据屏幕宽度自适应列数 */
+.container{
+    width: 1200px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 40px;
+}
+.container .box{
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 30px rgba(10, 10, 10, 0.623);
+}
+.container .box img{
+    max-width: 100%;
+}
+.container .box h2{
+    margin: 0;
+    padding: 0 0 10px;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    color: black;
+}
+@media (max-width: 1270px){
+    .container{
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+        padding: 20px 20px 20px 0;
+        columns: 3;
+        column-gap: 40px;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        columns: 2;
+        column-gap: 40px;
+    }
+    
+}
+@media (max-width: 460px){
+    .container{
+        columns: 1;
+        column-gap: 40px;
+    }
+}
+
+

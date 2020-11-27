@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css./reset.css">
+    <link rel="stylesheet" href="./css/infchange.css">
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/infchange.js"></script>
+  
+</head>
+<body>
+<div class="background">
+    <div class="Inf-topBar">
+        <div class="icon">天工易购</div>
+    </div>
+    <div class="box">
+    <div class="Inf-Main">
+        
+        <div class="Inf-top">
+            <div class="Inf-mfont" id="rootname"><strong><a href="javascript:;" class="changefont">信息修改</a></strong></div>
+            <!-- 这里就用后端传值然后显示，就是要写一个$(function({ajax})) -->
+            </div>
+            <div class="Inf-buttom">
+                <!-- hover会变颜色 -->
+            <a href="javascript:;"><div class="button-userinf" id="userinf"><strong>用户</strong></div></a>
+            <a href="javascript:;"><div class="button-shopinf" id="shopinf"><strong>商店</strong></div></a>
+            <a href="javascript:;"><div class="button-babyinf" id="babyinf"><strong>商品</strong></div></a>
+            </div>
+        <div class="infShow">
+    <form action="" method="POST" enctype="">
+        <!-- 这里是显示信息的地方 -->
+
+        <!-- 忘了是加id还是加name，所以都写了 -->
+
+        <!-- 用户信息修改 -->
+        <div  >
+            <div class="box1" id="userinfchange">
+                UID：<input type="text" name="userid" class="usertext" id="user-id"><br>
+                昵称：<input type="text" name="username" class="usertext" id="user-name"><br>
+                密码：<input type="password" name="userpwd" class="usertext" id="user-pwd"><br>
+                邮箱：<input type="text" name="usermail" class="usertext" id="user-mail"><br>
+                <input type="submit" value="提交" class="user-submit" id="usubmit">
+            </div>
+        </div>
+        
+        <!-- 店铺信息修改 -->
+        <div  >
+            <div class="box2" id="shopinfchange">
+                UID：<input type="text" name="shopid" class="shoptext" id="shop-id"><br>
+                店铺名字：<input type="text" name="shopname" id="shop-name" class="shoptext"><br>
+                店铺描述：<input type="text" name="shopdes" id="shop-des" class="shoptext"><br>
+                <input type="submit" value="提交" class="shop-submit" id="shopsub">
+            </div>
+        </div>
+
+        <!-- 商品信息修改 -->
+        <div>
+            <div class="box3" id="babyinfchange">
+                UID：<input type="text" name="goodid" class="babytext" id="good-id"><br>
+                商品名字：<input type="text" name="babynanme" id="baby-name" class="babytext"><br>
+                商品描述：<input type="text" name="babydes" id="baby-des" class="babytext"><br>
+                商品价格：<input type="text" name="babypri" id="baby-pri" class="babytext"><br>
+                商品数量：<input type="text" name="babynum" id="baby-num" class="babytext"><br>
+                <input type="submit" value="提交" class="baby-submit" id="goodsub">
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+</div> 
+<script>
+     $(function(){
+     var usershow=$("#userinfchange")
+     var shopshow=$("#shopinfchange")
+     var babyshow=$("#babyinfchange")
+      var one=$("#userinf")
+      var two=$("#shopinf")
+      var three=$("#babyinf")
+     one.click(function(){
+         usershow.css("display","block")
+         shopshow.css("display","none")
+         babyshow.css("display","none")
+         one.css("background-color","rgba(255,0,0,0)")
+         one.css("color","black")
+        
+     })
+     one.mousemove(function(){
+         one.css("background-color","teal")
+         one.css("color","white")
+     })
+     one.mouseleave(function(){
+         one.css("background-color","rgba(255,0,0,0)")
+         one.css("color","black")
+     })
+     two.click(function(){
+         usershow.css("display","none")
+         shopshow.css("display","block")
+         babyshow.css("display","none")
+         two.css("background-color","rgba(255,0,0,0)")
+         two.css("color","black")
+     })
+     two.mousemove(function(){
+         two.css("background-color","teal")
+         two.css("color","white")
+     })
+     two.mouseleave(function(){
+         two.css("background-color","rgba(255,0,0,0)")
+         two.css("color","black")
+     })
+     three.click(function(){
+         usershow.css("display","none")
+         shopshow.css("display","none")
+         babyshow.css("display","block")
+         three.css("background-color","rgba(255,0,0,0)")
+         three.css("color","black")
+     })
+     three.mousemove(function(){
+         three.css("background-color","teal")
+         three.css("color","white")
+     })
+     three.mouseleave(function(){
+         three.css("background-color","rgba(255,0,0,0)")
+         three.css("color","black")
+     })
+})
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/anmistr.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/jQuery.js"></script>
+  
+</head>
+<body>
+<div class="background">
+    <div class="admain-topBar">
+        <div class="icon">天工易购</div>
+    </div>
+    <div class="box">
+    <div class="admain-Main">
+        
+        <div class="admain-top">
+            <svg t="1605341584188" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2892" width="64" height="64"><path d="M876.0576 769.024c5.12 34.816 34.82624 29.696 39.94624 45.056 0 9.71776-5.12 45.056-19.968 49.664-14.84288 0-34.816-5.12-49.664 0-9.71776 5.12-19.95776 9.72288-25.07776 19.96288-9.728 25.08288 9.71776 45.05088 0 54.77888-14.848 9.728-45.06112 25.088-54.784 14.848-14.84288-14.848-14.84288-34.82112-45.056-34.82112-39.94112 0-39.94112 39.94112-59.904 39.94112s-54.784-14.848-54.784-29.70112c5.12-19.96288 14.848-34.81088-5.12-54.77888-25.088-19.968-54.77888 0-65.01888-9.728-14.84288-9.728-19.96288-34.816-14.84288-49.65888s39.936-14.84288 39.936-54.78912c0-29.69088-34.816-34.81088-39.936-54.77376-5.12-14.848 5.12-39.94624 19.96288-45.06624 25.08288-9.71776 39.93088 9.728 65.01888-9.71776 14.848-14.83776 9.728-49.664 9.728-59.904 5.12-14.84288 25.07776-19.96288 39.936-19.96288 29.696 0 19.96288 34.82112 59.904 39.94112 39.936 0 34.816-14.848 54.77888-39.94112 25.08288 0 45.06112 9.72288 49.65888 19.96288 9.728 19.968-9.71776 49.664 19.968 69.63712 25.07776 14.84288 49.664-5.12 65.024 0 9.72288 5.12 14.84288 19.96288 19.96288 39.94112-9.72288 29.16352-54.78912 24.04352-49.66912 69.10976z m-179.70176-99.84c-119.80288 29.696-74.752 204.28288 39.936 184.832 115.2-25.09824 99.84-209.92-39.936-184.832z m-204.288-174.58688c-119.808 0-214.528-94.72-214.528-214.528s94.72-214.528 214.528-214.528c119.80288 0 214.52288 94.72 214.52288 214.528 0.00512 114.688-94.71488 214.528-214.52288 214.528z m174.592 49.65888s-79.88224 0-74.76224 54.784c5.12 59.904-74.752 14.83776-89.59488 65.024-19.968 59.89376 9.72288 49.65376 25.08288 89.6 9.728 25.08288-39.936 39.936-34.816 84.992 9.728 59.904 59.904 29.70624 74.75712 65.024 9.72288 29.696-25.08288 49.664-104.96 49.664-65.01888 0-189.44 0-234.496-5.12 0 0-129.536-5.12-129.536-89.6 0 0-5.12-124.928 74.752-214.528 0 0 84.992-109.56288 229.38112-109.56288l264.192 9.72288z" fill="#007667" p-id="2893"></path></svg> 
+            <div class="admain-mfont" id="rootname"><strong><a href="javascript:;" class="rootfont">
+                
+                您好:管理员!（管理员页面仅限PC端使用）</a></strong></div>
+            <!-- 这里就用后端传值然后显示，就是要写一个$(function({ajax})) -->
+            </div>
+            <div class="admain-buttom">
+                <!-- hover会变颜色 -->
+            <a href="javascript:;"><div class="button-userinf" id="userInf"><strong>用户信息</strong></div></a>
+            <a href="javascript:;"><div class="button-shopinf" id="shopInf"><strong>商家信息</strong></div></a>
+            <a href="javascript:;"><div class="button-babyinf" id="babyInf"><strong>宝贝信息</strong></div></a>
+            <a href="javascript:;"><div class="button-babyinf" id="deleInf"><strong>删除信息</strong></div></a>
+            <a href="javascript:;"><div class="button-babyinf" id="newInf"><strong>添加账户</strong></div></a>
+            </div>
+        <div class="infShow">
+    <form action="" method="POST" enctype="multipart/form-data">
+        <!-- 这里是显示信息的地方 -->
+        <div id="show-useInf">这里显示用户信息</div>
+        <div id="show-shopInf">这里显示商店信息</div>
+        <div id="show-babyInf">这里显示宝贝信息</div>
+        <div id="show-deleInf">
+            <div class="box1">
+            选择你需要删除的类型<br>(管理员一经创建不可删除)<br>
+           用户: <input type="radio" name="delestyle" value="user">
+           商铺: <input type="radio" name="delestyle" value="stop">
+           宝贝: <input type="radio" name="delestyle" value="baby"><br>
+           输入ID: <input type="text" name="userid" id="inpuid"><br>
+           <div class="inputinf">这里自动显示商铺信息</div>
+           <input type="submit" value="点击此处确认删除" id="drop">
+          
+            </div>
+        </div>
+        <div id="show-newInf">
+            <div class="box2">
+            新建账户<br>
+            用户: <input type="radio" name="userstyle" value="user" id="type">
+            管理员: <input type="radio" name="userstyle" value="admain" id="type">
+            <!-- 用户: <input type="radio" name="userstyle" value="users" id="type">--><br> 
+            <input type="text" name="username" placeholder="请输入昵称" class="text" id="rootname">
+            <br>
+            <input type="text" name="userPassword" placeholder="请输入密码" class="text" id="rootpass">
+            <br>
+            <input type="text" name="userPasswordTrue" placeholder="确认密码/管理员密码" class="text" id="rootpasssure">
+            <br>
+            <input type="text" name="userphone" placeholder="请输入手机号(管理可不填)" class="text" id="rootphone">
+            <br>
+            选择性别:男:<input type="radio" name="famle" value="man" id="famle">
+            女:<input type="radio" name="famle" value="woman" id="famle">
+            <br>
+            <input type="text" name="userEmail" placeholder="请输入邮箱(管理可不填)" class="text" id="rootemail"><br>
+            <input type="submit" name="" value="提交" class="re-submit" id="rootgo">
+            <script>
+            $(document).ready(function(){      
+                var deleid=$("#inpuid").val()
+                var delestyle=$("input:radio['name=deldstyle':checked").attr("value")
+                var famle=$("input:radio['name=famle']:checked").attr("value")
+                var type=$('input:radio["name=userstyle"]:checked').attr("value")
+                var rootname=$("#rootname").val()
+                var rootpwd=$("#rootpass").val()
+                var rootpwdsure=$("#rootpasssuer").val()
+                var rootphone=$("#rootphone").val()
+                var rootmail=$("#rootmail").val()
+                    $("newInf").click(function(){
+                        $("#rootgo").click(function(){
+                        //这里不知怎么写，暂时先写成这样
+                        if(type == "user"){
+                            $.ajax({
+                            url:"rootnewuser.php",
+                            type:"post",
+                            dataType:"json",
+                            async:'true',
+                            data:{
+                                username:rootname,
+                                userPassword:rootpwd,
+                                userpasswordTrue:rootpwdsure,
+                                userphone:rootphone,
+                                userEmail:rootmail,
+                            },
+                            success:function (data){
+                                if(data==1){
+                                    alert("注册成功")
+                                    location.href="anmistr.html"
+                                }
+                                else{
+                                    alert("注册失败")
+                                }
+                            },
+                            error:function (){
+                                alert("检查服务器情况")
+                            }
+                            })
+                        }
+                            if(type == "admain"){
+                                $.ajax({
+                                url:"rootnewcon.php",
+                                type:"post",
+                                dataType:"json",
+                                async:'true',
+                                data:{
+                                    username:rootname,
+                                    userPassword:rootpwd,
+                                    userpasswordTrue:rootpwdsure,
+                                    userphone:rootphone,
+                                    userEmail:rootmail,
+                                },
+                                success:function (data){
+                                    if(data==1){
+                                        alert("注册成功")
+                                    }
+                                    else{
+                                        alert("注册失败")
+                                    }
+                                },
+                                error:function (){
+                                    alert("检查服务器情况")
+                                }
+                                })
+                            }
+                        })
+                    })
+              
+                    $("deleInf").click(function(){
+                        $("#drop").click(function(){
+                            if(delestyle == user){
+                                $.ajax({
+                                url:"peopleinfchange.php",
+                                type:"post",
+                                dataType:"json",
+                                async:'true',
+                                data:{
+                                    delestyle:delestyle,
+                                    userid:deleid
+                                },
+                                success:function (data){
+                                    if(data==1){
+                                        alert("删除成功")
+                                    }
+                                    else{
+                                        alert("删除失败")
+                                    }
+                                },
+                                error:function (){
+                                    alert("请检查服务器情况")
+                                }
+                            })
+                            }
+                            if(delestyle == stop){
+                                $.ajax({
+                                url:"shopinffind.php",
+                                type:"post",
+                                dataType:"json",
+                                async:'true',
+                                data:{
+                                    delestyle:delestyle,
+                                    userid:deleid
+                                },
+                                success:function (data){
+                                    if(data==1){
+                                        alert("删除成功")
+                                    }
+                                    else{
+                                        alert("删除失败")
+                                    }
+                                },
+                                error:function (){
+                                    alert("请检查服务器情况")
+                                }
+                            })
+                            }
+                            if(delestyle == baby){
+                                $.ajax({
+                                url:"babyinfchange.php",
+                                type:"post",
+                                dataType:"json",
+                                async:'true',
+                                data:{
+                                    delestyle:delestyle,
+                                    userid:deleid
+                                },
+                                success:function (data){
+                                    if(data==1){
+                                        alert("删除成功")
+                                    }
+                                    else{
+                                        alert("删除失败")
+                                    }
+                                },
+                                error:function (){
+                                    alert("请检查服务器情况")
+                                }
+                            })
+                            }
+                        })
+                    })
+                })
+            </script>
+        <div id="show-inf">
+            <div class="noInformation"></div>
+        </div>
+    </form>
+    </div>
+    </div>
+</div>
+<script>
+     $(function(){
+         var one=$("#userInf")
+         var two=$("#shopInf")
+         var three=$("#babyInf")
+         var four=$("#deleInf")
+         var five=$("#newInf")
+        
+         var oneShow=$("#show-useInf")
+         var twoShow=$("#show-shopInf")
+         var thrShow=$("#show-babyInf")
+         var fouShow=$("#show-deleInf")
+         var fivShow=$("#show-newInf")
+         var sixShow=$("#show-inf")
+        //  jq的背景颜色要用rgba0000的透明度，需要重构
+        // 点击的时候背景颜色变色，然后字体变成teal颜色，当点击其他的颜色的时候，字体变为黑色，
+      one.click(function(){
+          oneShow.css("display","block")
+          twoShow.css("display","none")
+          thrShow.css("display","none")
+          fouShow.css("display","none")
+          fivShow.css("display","none")
+          one.css("background-color","rgba(255,0,0,0)")
+          one.css("color","black")
+          twoShow.css("display","none")
+      })
+      one.mousemove(function(){
+          one.css("background-color","teal")
+          one.css("color","white")
+      })
+      one.mouseleave(function(){
+          one.css("background-color","rgba(255,0,0,0)")
+          one.css("color","black")
+      })
+
+
+      two.click(function(){
+          oneShow.css("display","none")
+          twoShow.css("display","block")
+          thrShow.css("display","none")
+          fouShow.css("display","none")
+          fivShow.css("display","none")
+          two.css("background-color","rgba(255,0,0,0)")
+          two.css("color","black")
+         
+      })
+      two.mousemove(function(){
+          two.css("background-color","teal")
+          two.css("color","white")
+      })
+      two.mouseleave(function(){
+          two.css("background-color","rgba(255,0,0,0)")
+          two.css("color","black")
+      })
+
+
+      three.click(function(){
+          oneShow.css("display","none")
+          twoShow.css("display","none")
+          thrShow.css("display","block")
+          fouShow.css("display","none")
+          fivShow.css("display","none")
+          three.css("background-color","rgba(255,0,0,0)")
+          three.css("color","black")
+      })
+      three.mousemove(function(){
+          three.css("background-color","teal")
+          three.css("color","white")
+      })
+      three.mouseleave(function(){
+          three.css("background-color","rgba(255,0,0,0)")
+          three.css("color","black")
+      })
+
+
+
+      four.click(function(){
+          oneShow.css("display","none")
+          twoShow.css("display","none")
+          thrShow.css("display","none")
+          fouShow.css("display","block")
+          fivShow.css("display","none")
+          four.css("background-color","rgba(255,0,0,0)")
+          four.css("color","black")
+      })
+      four.mousemove(function(){
+          four.css("background-color","teal")
+          four.css("color","white")
+      })
+      four.mouseleave(function(){
+          four.css("background-color","rgba(255,0,0,0)")
+          four.css("color","black")
+      })
+
+
+
+      five.click(function(){
+          oneShow.css("display","none")
+          twoShow.css("display","none")
+          thrShow.css("display","none")
+          fouShow.css("display","none")
+          fivShow.css("display","block")
+          five.css("background-color","rgba(255,0,0,0)")
+          five.css("color","black")
+      })
+      five.mousemove(function(){
+          five.css("background-color","teal")
+          five.css("color","white")
+      })
+      five.mouseleave(function(){
+          five.css("background-color","rgba(255,0,0,0)")
+          five.css("color","black")
+      })
+      
+   
+     })
+    </script>
+     <script>
+        $("#drop").click(function(){
+            var droptype=$("input:radio['name=delestyle']:checked").attr("value")
+            var dropid=$("#inputid").val()
+            $.ajax({
+             url:"rootdeletesomething.php",
+        type:"post",
+        dataType:"json",
+        async:'true',
+        data:{
+         delestyle:droptype,
+         userid:dropid
+         },
+        success:function (data){
+           if(data==1){
+               alert("删除成功")
+           }
+           if(data==0){
+               alert("删除失败")
+           }
+        },
+        error:function (){
+            alert("服务器有问题")
+        }
+            })
+        })
+    </script>
+</body>
+</html>
